@@ -1,0 +1,113 @@
+@import "../../Styles/Variables.module.scss";
+
+.Container {
+  font-family: "Poppins", sans-serif;
+  background: url("../../Assets/Login_bg.jpg");
+  background-size: cover;
+  overflow: hidden;
+  height: 100lvh;
+  width: 100lvw;
+  @include Grid(center, center, 2rem);
+  align-content: center;
+  h2 {
+    font-size: large;
+    color: white;
+    font-weight: 400;
+    font-family: inherit;
+    font-size: 26px;
+  }
+}
+
+.Container form {
+  h3 {
+    color: $primary-color;
+    font-size: 1.4rem;
+  }
+  @include Grid(center, center, 0.7rem);
+  align-content: center;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: white;
+  width: 100%;
+  max-width: 24rem;
+  // height: 100%;
+  // max-height: 25rem;
+  box-shadow: 0px 7px 24px 0px #0000000d;
+  .form_control {
+    width: 90%;
+    position: relative;
+    @include Grid(center, initial, 0.3rem);
+    label {
+      color: $labels-color;
+      font-size: 15px;
+    }
+    input {
+      width: 100%;
+      height: 2.5rem;
+      text-indent: 0.5rem;
+      border: 1px solid $Border-color;
+      border-radius: 5px;
+      background-color: white;
+      outline: none;
+      border-radius: 10px;
+      //   position: relative;
+    }
+
+    p {
+      position: absolute;
+      right: 5px;
+      top: 40px;
+      color: $primary-color;
+    }
+
+    span {
+      color: $primary-color;
+      font-size: 0.8rem;
+    }
+  }
+
+  .input-error {
+    border-color: $primary-color !important;
+    animation: shake 0.5s ease-in-out;
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-3px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  button {
+    margin: 0.6rem 0 1rem 0;
+    height: 2.5rem;
+    width: 90%;
+    background-color: $primary-color;
+    color: white;
+    border-color: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    @include Grid(center, center, 0rem);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Container h2 {
+    font-size: large;
+    text-align: center;
+  }
+  .Container form {
+    max-width: 80vw;
+  }
+}

@@ -1,0 +1,26 @@
+$primary-color: #ed334d;
+$secondary-color: #4b74ff;
+
+//Status Code -colors
+$pending-color: #ffeda9;
+$Delivered-color: #8effae;
+$labels-color: #b1b1b1;
+$Border-color: #cacaca;
+$table_header-color: #f5f5f5;
+$violet_color: #4b74ff;
+
+// Flex Layout
+@mixin flexbox($align: initial, $justify: initial, $gap: 0) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+}
+
+// Grid Layout
+@mixin Grid($align: initial, $justify: initial, $gap: 0) {
+    display: grid;
+    align-items: $align;
+    justify-items: $justify;
+    gap: $gap;
+}

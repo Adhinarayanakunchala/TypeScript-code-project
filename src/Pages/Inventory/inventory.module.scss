@@ -1,0 +1,157 @@
+@import "../../Styles/Variables.module.scss";
+.Container {
+    padding: 0 4rem;
+    margin: 1rem 0;
+    header {
+        @include flexbox(center, space-between, 0.5rem);
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 550;
+        }
+        a {
+            background-color: $primary-color;
+            border: none;
+            cursor: pointer;
+            color: white;
+            padding: 0.3rem 1rem;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+    }
+}
+.Active-btn,
+.inactive-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    border: 1px solid $primary-color;
+    padding: 0.3rem 0.5rem;
+    border-radius: 10px;
+}
+.inactive-btn {
+    color: white;
+    background-color: $primary-color;
+}
+.Active-btn {
+    color: $primary-color;
+}
+.table {
+    @include flexbox(center, initial, 1.2rem);
+    flex-direction: column;
+}
+.table table {
+    thead {
+        position: sticky;
+        top: 60px;
+    }
+    tbody tr {
+        cursor: pointer;
+        &:hover {
+            background-color: lighten($Border-color, 10%);
+        }
+    }
+}
+.table > button {
+    background-color: $primary-color;
+    color: white;
+    border-color: transparent;
+    padding: 0.5rem;
+    margin-right: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    align-self: flex-end;
+    @include flexbox(center, right, 1rem);
+}
+.detail_container {
+    padding: 1.5rem 0 0 4rem;
+    header button {
+        border: none;
+        background-color: inherit;
+        cursor: pointer;
+    }
+    h3 {
+        font-size: 1.3rem;
+        font-weight: 550;
+    }
+    header {
+        margin-bottom: 2rem;
+        @include flexbox(center, initial, 1.2rem);
+    }
+}
+.Patient-details {
+    width: 100%;
+    max-width: 350px;
+}
+.Patient-details,
+.detail {
+    @include Grid(center, initial, 1.2rem);
+}
+.detail {
+    width: 100%;
+
+    grid-template-columns: 1fr 1fr;
+    h3 {
+        color: #495057;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+    p {
+        color: #74788d;
+    }
+    select {
+        background-color: $pending-color;
+        width: 7rem;
+        border-radius: 10px;
+        cursor: pointer;
+        border-color: transparent;
+        padding: 0.5rem;
+        outline: none;
+    }
+    select option {
+        background: #fff9e5;
+        border-color: transparent;
+    }
+}
+.Patient-details button {
+    grid-column: 1/-1;
+    background-color: $primary-color;
+    border-color: transparent;
+    font-size: 1.1rem;
+    color: white;
+    cursor: pointer;
+    padding: 0.3rem 0;
+    border-radius: 10px;
+}
+.header_logs {
+    @include flexbox(center, initial, 0.5rem);
+    button {
+        border: none;
+        background-color: inherit;
+        cursor: pointer;
+    }
+    h3 {
+        font-size: 1.2rem;
+        font-weight: 550;
+    }
+}
+.inventory_Navbar {
+    @include flexbox(initial, initial, 0);
+    padding-left: 4rem;
+    button {
+        border: 1px solid transparent;
+        background-color: inherit;
+        width: 100%;
+        max-width: 7rem;
+        font-size: 1rem;
+        padding-bottom: 1rem;
+        color: gray;
+        cursor: pointer;
+    }
+    .active-tab {
+        border-bottom: 2px solid $primary-color;
+        color: $primary-color;
+        font-weight: 550;
+    }
+}

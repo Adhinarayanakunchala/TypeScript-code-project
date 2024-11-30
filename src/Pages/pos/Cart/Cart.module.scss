@@ -1,0 +1,290 @@
+@import "../../../Styles/Variables.module.scss";
+
+.Container {
+  max-height: 80vh;
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  align-content: baseline;
+  //   overflow: auto;
+  @include Grid(initial, initial, 1rem);
+}
+
+.empty_cart {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    color: #ed334d;
+    margin: 0px;
+    padding: 0px;
+  }
+  span {
+    font-size: 1.2rem;
+    color: #ed334d;
+    margin: 0px;
+    padding: 0px;
+  }
+}
+
+.orders_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  h1 {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    background-color: #f5f5f5;
+  }
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  border-bottom: 2px solid #e5e5e5;
+  h4 {
+    color: #ed334d;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0px;
+  }
+}
+
+.item_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #e5e5e5;
+  padding: 0.4rem 0.5rem;
+  .item_sub_container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.8rem;
+
+    .item_imag_container {
+      align-items: initial;
+      justify-content: space-between;
+      width: 30px;
+      height: 30px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
+    }
+    .item_img {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+
+      p {
+        font-size: 1rem;
+        font-weight: 400;
+        margin: 0px;
+        color: #2a2d2d;
+        width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+  .item_btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: -webkit-baseline-middle;
+    flex-direction: row;
+    gap: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    color: #ffff;
+    background-color: transparent;
+    border-radius: 5px;
+
+    button {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      background-color: transparent;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: $primary-color;
+      padding: 0.3rem;
+      border-style: none;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.Cart_items,
+.form-data .form_control {
+  @include Grid(center, initial, 0rem);
+}
+
+.details_content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 80%;
+  padding: 1rem;
+  .form-control {
+    display: grid;
+    gap: 0.2rem;
+  }
+
+  input {
+    width: 100%;
+    height: 2rem;
+    text-indent: 0.5rem;
+    border-radius: 10px;
+    border-style: none;
+    outline: none;
+  }
+}
+
+.Patient_details,
+.form-data {
+  @include Grid(initial, initial, 0.3rem);
+}
+.Patient_details button {
+  border: none;
+  background-color: inherit;
+  padding: 0 1rem;
+  // height: 50px;
+  cursor: pointer;
+  h3 {
+    font-weight: 550;
+    font-size: 1rem;
+  }
+}
+
+.form-data {
+  padding: 0 2rem;
+  gap: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.form-data .form_control {
+  gap: 0.3rem;
+  width: 100%;
+  max-width: 34rem;
+}
+.form_control label {
+  font-size: 0.9rem;
+}
+.form_control input {
+  // border: 1px solid $Border-color;
+  height: 2.5rem;
+  text-indent: 0.5rem;
+  border-radius: 10px;
+  outline: none;
+}
+.form_control span {
+  color: red;
+  font-size: 0.9rem;
+}
+.input-error {
+  color: red;
+  font-size: 0.9rem;
+}
+.Container form {
+  @include Grid(initial, initial, 1rem);
+  //   margin-top: 1rem;
+  //   box-shadow: 0px 1px 2px 0px #00000040;
+  //   border: 1px solid #36363640;
+  width: 100%;
+  max-width: 700px;
+
+  .header_title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.6rem 0 0;
+
+    h1 {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+      align-items: center;
+      text-align: initial;
+      position: relative;
+      button {
+        position: absolute;
+        left: 0;
+        font-size: 1.1rem;
+        border: none;
+        background-color: inherit;
+      }
+    }
+  }
+}
+.Container form .submit {
+  background-color: $primary-color;
+  justify-self: right;
+  border: 1px solid transparent;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.payment-details label {
+  @include flexbox(center, initial, 0.5rem);
+}
+.payment-details label {
+  cursor: pointer;
+}
+.payment-details label input[type="radio"]:checked {
+  accent-color: red;
+}
+.input-error {
+  // label {
+  //     color: $primary-color;
+  // }
+  input {
+    border-color: $primary-color;
+  }
+}
+.payment-link {
+  @include flexbox(initial, initial, 0.5rem);
+  input {
+    width: 100%;
+    outline: none;
+    border: 1px solid #ccc;
+    text-indent: 1rem;
+    border-radius: 5px;
+  }
+
+  button {
+    color: white;
+    background-color: $secondary-color;
+    width: 15rem;
+    border-radius: 10px;
+    text-align: center;
+    justify-self: center;
+    border-color: transparent;
+    height: 2.5rem;
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+      cursor: pointer;
+    }
+  }
+}

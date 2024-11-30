@@ -1,0 +1,137 @@
+@import "./Variables.module.scss";
+
+.Paginate_wrapper {
+  margin: 1rem 0;
+  @include flexbox(center, center, 0.5rem);
+}
+
+.Paginate_Container {
+  @include flexbox(center, center, 0.5rem);
+}
+.pageClassName,
+.previousClassName,
+.nextClassName {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.table_container {
+  height: 370px;
+  overflow: auto;
+}
+.table_container table thead tr {
+  position: sticky;
+  top: 0;
+}
+.pageLinkClassName,
+.pageClassName {
+  background: #f2f2f2;
+  width: 0.6rem;
+  height: 0.6rem;
+  text-align: center;
+  padding: 0.5rem;
+  @include flexbox(center, center, 0rem);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+// -----------Status Bar --------
+
+.pending,
+.Delivered {
+  width: 100%;
+  color: black;
+  background-color: $pending-color;
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+}
+
+.Delivered {
+  background-color: $Delivered-color;
+}
+
+.status-booked {
+  background-color: #f0ad4e;
+  color: white;
+  border-radius: 36px;
+  padding: 5px;
+}
+
+.status-issued {
+  background-color: #5bc0de;
+  color: white;
+  border-radius: 36px;
+  padding: 5px;
+}
+
+.status-shipped {
+  background-color: #337ab7;
+  color: white;
+  border-radius: 36px;
+  padding: 5px;
+}
+
+.status-delivered {
+  background-color: #5cb85c;
+  color: white;
+  border-radius: 36px;
+  padding: 5px;
+}
+
+.booked {
+  background-color: #1ab385;
+  color: white;
+  border-radius: 36px;
+  padding: 5px 0;
+}
+
+.delivered {
+  background-color: #5bc0de;
+  color: white;
+  border-radius: 36px;
+  padding: 5px 0;
+}
+
+.activeClassName,
+.activeLinkClassName {
+  background-color: $primary-color;
+  color: white;
+}
+.disabledLinkClassName,
+.disabledClassName {
+  color: gray;
+  cursor: not-allowed;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}

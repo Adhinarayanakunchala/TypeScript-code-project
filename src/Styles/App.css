@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+/* Customize the success icon */
+.swal2-icon.swal2-success .swal2-success-line {
+    background-color: #4caf50 !important; /* Change the color of the success icon */
+}
+
+/* Customize the success title */
+.swal2-title {
+    color: #4caf50 !important; /* Change the color of the success title */
+    font-size: 24px !important; /* Adjust the font size of the success title */
+    font-weight: bold !important; /* Apply bold font weight to the success title */
+}
+
+/* Customize the success message */
+.swal2-content {
+    color: #333 !important; /* Change the color of the success message */
+    font-size: 18px !important; /* Adjust the font size of the success message */
+}
+
+/* Customize the success button */
+.swal2-success .swal2-confirm {
+    background-color: #4caf50 !important; /* Change the background color of the success button */
+    border-color: #4caf50 !important; /* Change the border color of the success button */
+    font-size: 16px !important; /* Adjust the font size of the success button */
+}
+
+.swal2-success .swal2-confirm:hover {
+    background-color: #45a049 !important; /* Change the background color of the success button on hover */
+    border-color: #45a049 !important; /* Change the border color of the success button on hover */
+}
+
+/* Add subtle animation to success icon */
+.swal2-icon.swal2-success .swal2-success-line-tip {
+    transition: all 0.3s ease-in-out !important;
+}
+
+.swal2-icon.swal2-success .swal2-success-line-long {
+    transition: all 0.3s ease-in-out !important;
+}
+
+.swal2-icon.swal2-success .swal2-success-ring {
+    transition: all 0.3s ease-in-out !important;
+}

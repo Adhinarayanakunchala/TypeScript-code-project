@@ -1,0 +1,19 @@
+@import "../../Styles/Variables.module.scss";
+
+.Table_Container {
+  border-collapse: collapse;
+  width: 98%;
+  th {
+    text-align: center;
+    font-weight: 550;
+    background-color: $table_header-color;
+    padding: 1rem 0;
+    font-size: 1rem;
+    font-weight: 550;
+  }
+  tbody tr td {
+    padding: 0.8rem 0.5rem;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+  }
+}

@@ -1,0 +1,124 @@
+@import "../../Styles/Variables.module.scss";
+.Container {
+  padding-left: 4rem;
+  margin: 1rem 0;
+  header {
+    display: flex;
+    justify-content: space-between;
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 550;
+    }
+  }
+}
+.table table {
+  thead {
+    position: sticky;
+    top: 60px;
+  }
+  tbody tr {
+    cursor: pointer;
+    &:hover {
+      background-color: lighten($Border-color, 10%);
+    }
+  }
+}
+
+.detail_container {
+  padding: 1.5rem 0 0 4rem;
+  header button {
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+  }
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 550;
+  }
+  header {
+    margin-bottom: 2rem;
+    @include flexbox(center, initial, 1.2rem);
+  }
+}
+.Patient-details {
+  width: 100%;
+  max-width: 700px;
+}
+.Patient-details,
+.detail {
+  @include Grid(center, initial, 1.2rem);
+}
+.detail {
+  width: 100%;
+
+  grid-template-columns: 1fr 1fr;
+  h3 {
+    color: #495057;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  p {
+    color: #74788d;
+  }
+  select {
+    background-color: $pending-color;
+    width: 7rem;
+    border-radius: 10px;
+    cursor: pointer;
+    border-color: transparent;
+    padding: 0.5rem;
+    outline: none;
+  }
+  select option {
+    background: #fff9e5;
+    border-color: transparent;
+  }
+}
+.details {
+  @include Grid(center, initial, 1rem);
+}
+
+.doc-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: left;
+  width: 40%;
+
+  .d-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #2e5894;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0px;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #2e5894;
+    outline: none;
+  }
+}
+
+.details {
+  width: 100%;
+  grid-template-columns: 1fr;
+  h3 {
+    color: #495057;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+}
+.Patient-details button {
+  grid-column: 1/-1;
+  background-color: $primary-color;
+  border-color: transparent;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  padding: 0.3rem 0;
+  border-radius: 10px;
+}

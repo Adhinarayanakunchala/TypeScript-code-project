@@ -1,0 +1,157 @@
+@import "../../Styles/Variables.module.scss";
+
+.Container {
+  @include Grid(initial, initial, 0.3rem);
+  grid-template-columns: 65% 34.5%;
+  margin-top: 0.5rem;
+  // min-width: 1400px;
+  .search_result {
+    font-weight: 520;
+    padding-left: 2rem;
+    span {
+      color: $primary-color;
+    }
+  }
+}
+
+.Container_left {
+  @include Grid(initial, initial, 0rem);
+  align-content: baseline;
+  border-right: 1px solid $Border-color;
+  height: calc(100lvh - 125px);
+
+  .Table {
+    height: 100%;
+    max-height: calc(100lvh - 268px);
+    overflow: auto;
+    thead {
+      position: sticky;
+      top: 0;
+      background-color: white;
+      z-index: 4;
+      th {
+        background-color: inherit;
+      }
+    }
+
+    tbody {
+      display: block;
+      max-height: calc(100lvh - 268px);
+      overflow-y: auto;
+    }
+
+    tr {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    th,
+    td {
+      padding: 8px 16px;
+      border: 1px solid $Border-color;
+    }
+  }
+}
+
+.filters {
+  padding: 0.5rem 0 0rem 2rem;
+  position: sticky;
+  top: 60px;
+  z-index: 2;
+  background-color: white;
+  @include flexbox(initial, initial, 2rem);
+  .form-control {
+    @include flexbox(initial, center, 0.5rem);
+    flex-direction: column;
+    justify-content: space-between;
+    label {
+      color: #495057;
+    }
+    select,
+    input {
+      width: 18rem;
+      outline: none;
+      height: 2.5rem;
+      border: 1px solid $Border-color;
+      border-radius: 10px;
+      text-indent: 0.5rem;
+    }
+    button {
+      color: white;
+      background-color: $secondary-color;
+      width: 8rem;
+      border-radius: 10px;
+      border-color: transparent;
+      height: 2.5rem;
+      &:hover {
+        background-color: darken($secondary-color, 10%);
+        cursor: pointer;
+      }
+    }
+  }
+}
+.Add {
+  background-color: $primary-color;
+  color: white;
+  height: 2rem;
+  width: 4rem;
+  border-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+.Remove {
+  border: 2px solid $primary-color;
+  background-color: transparent;
+  color: $primary-color;
+  height: 2rem;
+  width: 4rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.print,
+.view-Details {
+  border: none;
+  color: red;
+  cursor: pointer;
+  background-color: inherit;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.view-Details {
+  color: blue;
+  text-decoration: underline;
+}
+.bloodGroup {
+  @include flexbox(center, initial, 0.5rem);
+  img {
+    width: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1380px) {
+  .filters {
+    padding: 1rem 0 1rem 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    .form-control {
+      select,
+      input {
+        width: 13rem;
+      }
+    }
+  }
+  // .Container {
+  //     grid-template-columns: 1fr;
+  // }
+  // .Container_left {
+  //     height: 100%;
+  //     .Table {
+  //         max-height: 100%;
+  //     }
+  // }
+}

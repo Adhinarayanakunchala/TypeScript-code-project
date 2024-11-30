@@ -1,0 +1,22 @@
+.Loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* bottom: -70px; */
+    background-color: rgba(0, 0, 0, 0.3);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    z-index: 10;
+}
+.loader {
+    z-index: 10;
+    overflow: hidden !important;
+}
+.load {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
